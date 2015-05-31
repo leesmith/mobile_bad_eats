@@ -32,8 +32,8 @@ CSV.foreach('history.csv') do |row|
   inspection_date = Date.strptime(row[0], '%Y-%m-%d')
   score = row[1].to_i
   establishment = row[2]
-  address = row[3].to_i
-  city = row[4].to_i
+  address = row[3]
+  city = row[4]
   inspection_history << InspectionReport.new(inspection_date, score, establishment, address, city)
 end
 
